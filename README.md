@@ -41,3 +41,16 @@ typedef T* iterator;
     iterator end(){
         return data + size;
     }
+    
+    
+    bool operator==(GMvector &v) {
+        if (size != v.size) {
+            return false;
+        }
+        for (int i = 0; i < size; i++) {
+            if (data[i] != v.data[i]) {
+                return false;
+            }
+        }
+        return true;
+    }
