@@ -54,3 +54,17 @@ typedef T* iterator;
         }
         return true;
     }
+    
+    
+    
+   bool operator<(GMvector &v) {
+        bool flag = false;
+        for (int i = 0; i < size; i++) {
+            if (data[i] < v.data[i]) {
+                flag = !flag;
+            } else {
+                flag = flag;
+            }
+        }
+        return flag;
+    }
