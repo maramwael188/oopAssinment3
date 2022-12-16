@@ -68,3 +68,13 @@ typedef T* iterator;
         }
         return flag;
     }
+    
+    
+    
+   bool empty() {
+        if (size == 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
