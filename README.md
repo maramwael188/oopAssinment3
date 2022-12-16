@@ -69,7 +69,11 @@ typedef T* iterator;
         return flag;
     }
     
-    
+    friend ostream &operator<<(ostream &out, GMvector<T> v) {
+        for (int i = 0; i < v.size; i++)
+            out << v.data[i] << ' ';
+        return out;
+    };
     
    bool empty() {
         if (size == 0) {
